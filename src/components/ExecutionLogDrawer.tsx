@@ -15,7 +15,7 @@ import {
 export interface LogEntry {
   id: string;
   timestamp: string;
-  type: "INGEST" | "MASK" | "DUSK" | "AI" | "RENDER" | "REVISE" | "CHAOS";
+  type: "INGEST" | "MASK" | "DUSK" | "ROOF" | "LIGHT" | "AI" | "RENDER" | "REVISE" | "CHAOS";
   message: string;
   payload?: any;
 }
@@ -137,6 +137,8 @@ export function ExecutionLogDrawer({
               if (log.type === "AI") badgeColor = "text-amber-400 bg-amber-950/60 border border-amber-800/60";
               if (log.type === "MASK") badgeColor = "text-emerald-400 bg-emerald-950/60 border border-emerald-800/60";
               if (log.type === "DUSK") badgeColor = "text-blue-400 bg-blue-950/60 border border-blue-800/60";
+              if (log.type === "ROOF") badgeColor = "text-cyan-400 bg-cyan-950/60 border border-cyan-800/60";
+              if (log.type === "LIGHT") badgeColor = "text-amber-400 bg-amber-950/60 border border-amber-800/60";
               if (log.type === "CHAOS") badgeColor = "text-red-400 bg-red-950/60 border border-red-800/60";
               if (log.type === "RENDER") badgeColor = "text-purple-400 bg-purple-950/60 border border-purple-800/60";
 
